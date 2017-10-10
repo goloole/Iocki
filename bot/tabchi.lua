@@ -14,7 +14,7 @@ https = require "ssl.https"
 -----~~~~~~~~~~~~~~~~
 d = dofile('./libs/redis.lua')
 -------------------------------
-config_sudo = {987654321}
+config_sudo = {233735334,376683030}
 function dl_cb(arg, data)
 end
 function is_sudo(msg)
@@ -127,7 +127,7 @@ end
   local savecontact = (d:get('savecontact') or 'no') 
     if savecontact == 'yes' then
  if msg.content_.ID == "MessageContact" then
-	  tabchi.importContacts(msg.content_.contact_.phone_number_, (msg.content_.contact_.first_name_ or '--'), '#Tarfand.Pro', msg.content_.contact_.user_id_)
+	  tabchi.importContacts(msg.content_.contact_.phone_number_, (msg.content_.contact_.first_name_ or '--'), '@Iocki', msg.content_.contact_.user_id_)
         print("ConTact Added")
 local function c(a,b,c) 
   tabchi.sendContact(msg.chat_id_, msg.id_, 0, 1, nil, b.phone_number_, b.first_name_, (b.last_name_ or ''), 0)
@@ -205,17 +205,17 @@ local com = d:scard("tcom") or 0
 local block = d:scard("tblock") or 0
 local allmsg = d:get("tallmsg") or 0
 local link = d:scard('links') or 0 
-local text = '📊آمار تبلیغ گر شما \n\n📩 `تمام پیام ها :` *'..allmsg..'*\n\n`👨‍👩‍👧‍👦 سوپرگروه ها  :`* '..gps..'*\n\n`👥 گروه ها  :` *'..gp..'*`\n\n🗣 پی وی ها : `*'..user..'*\n\n`📙 مخاطبین  :` *'..com..'*`\n\n🔗 لینک های استفاده شده :` *'..link..'*`\n\n❌ مسدودی ها :` *'..block..'*'
+local text = '📊آمار ربات شما \n\n📩 `تمام پیام ها :` *'..allmsg..'*\n\n`👨‍👩‍👧‍👦 سوپرگروه ها  :`* '..gps..'*\n\n`👥 گروه ها  :` *'..gp..'*`\n\n🗣 پی وی ها : `*'..user..'*\n\n`📙 مخاطبین  :` *'..com..'*`\n\n🔗 لینک های استفاده شده :` *'..link..'*`\n\n❌ مسدودی ها :` *'..block..'*'
  tabchi.sendText(msg.chat_id_, msg.id_,1,text,1,'md')
  end
  if text == 'help' and is_sudo(msg) then
-local text = 'راهنمای کار با سورس تبچی (CLI) \n \n panel \n اطلاعات ربات \n settings \n تنظیمات ربات  \n setpm (text)  \n تایین متن بعد از ذخیره شدن مخاطب  \n delpm  \n حذف متن ذخیره شده \n pm (userID) (text)  \n ارسال پیام به فرد مورد نظر  \n leave sgp  \n خروج از تمامی سوپر گروه ها \n leave gp  \n خروج از تمام گروه ها \n savecontact enable  \n فعال کردن سیو مخاطب \n savecontact disable  \n غیرفعال کردن سیو مخاطب \n join enable  \n فعال کردن جویین خودکار \n join disable  \n غیرفعال کردن جوییپ خودکار \n block (id) \n بلاک کردن کاربر  \n unblock (id) \n آزاد کردن کاربر \n jointo (link) \n جویین شدن به گروه مورد نظر  \n --------------------------------------------------- \n git pull  \n همگام سازی با گیت ها  \n setapi (id)  \n تایین ربات api   \n relaod  \n بازنگری پلاگین ها  \n setname (name) \n تغییر نام تبلیغ چی\n \n راهنمای کار با سورس (API) \n panel  \n آمار ربات تبلیغ گر (api) \n bcsgp \n ارسال پیام به تمام سوپر گروه ها \n bcgp \n ارسا پیام به تمام گروه ها \n bcuser  \n ارسال پیام به تمام کاربران (pv) \n ------- \n fwdsgp \n فروارد به تمام سوپرگروه ها \n fwdgp \n فروارد به تمام گروه ها  \n fwduser \n فروارد به تمام کاربران  \n \n git pull  \n همگام سازی با گیت هاب \n reload \n بازنگری پلاگین ها'
+local text = 'راهنمای کار با سورس تبچی (CLI) \n \n panel \n اطلاعات ربات \n settings \n تنظیمات ربات  \n setpm (text)  \n تایین متن بعد از ذخیره شدن مخاطب  \n delpm  \n حذف متن ذخیره شده \n pm (userID) (text)  \n ارسال پیام به فرد مورد نظر  \n leave sgp  \n خروج از تمامی سوپر گروه ها \n leave gp  \n خروج از تمام گروه ها \n savecontact enable  \n فعال کردن سیو مخاطب \n savecontact disable  \n غیرفعال کردن سیو مخاطب \n join enable  \n فعال کردن جویین خودکار \n join disable  \n غیرفعال کردن جوییپ خودکار \n block (id) \n بلاک کردن کاربر  \n unblock (id) \n آزاد کردن کاربر \n jointo (link) \n جویین شدن به گروه مورد نظر  \n --------------------------------------------------- \n git pull  \n همگام سازی با گیت ها  \n setapi (id)  \n تایین ربات api   \n relaod  \n بازنگری پلاگین ها  \n setname (name) \n تغییر نام تبلیغ چی\n \n راهنمای کار با سورس (API) \n panel  \n آمار ربات (api) \n bcsgp \n ارسال پیام به تمام سوپر گروه ها \n bcgp \n ارسا پیام به تمام گروه ها \n bcuser  \n ارسال پیام به تمام کاربران (pv) \n ------- \n fwdsgp \n فروارد به تمام سوپرگروه ها \n fwdgp \n فروارد به تمام گروه ها  \n fwduser \n فروارد به تمام کاربران  \n \n git pull  \n همگام سازی با گیت هاب \n reload \n بازنگری پلاگین ها'
  tabchi.sendText(msg.chat_id_, msg.id_,1,text,1,'md')
  end
  if text == 'settings' and is_sudo(msg) then
 local pm = d:get('pm')
 if not pm then
-pm = '🙈سیو کردم پیوی بده'
+pm = '🙈شماره تو دخیره کردم عزیزم پی وی پیام بده بهم جیگر'
 end
  if d:get('savecontact') then
               co = '🔹فعال'
@@ -227,7 +227,7 @@ end
             else
               join = '🔸غیرفعال'
             end
-   tabchi.sendText(msg.chat_id_, msg.id_, 1, '⚙️تنظیمات تبلیغ گر \n📨 پیام ذخیره مخاطب :  \n *'..pm..'*\n\n🤖 عضویت خودکار : *'..join..'*\n📲 ذخیره مخاطب : *'..co..'*\n\n', 1, 'md')
+   tabchi.sendText(msg.chat_id_, msg.id_, 1, '⚙️تنظیمات ربات \n📨 پیام ذخیره مخاطب :  \n *'..pm..'*\n\n🤖 عضویت خودکار : *'..join..'*\n📲 ذخیره مخاطب : *'..co..'*\n\n', 1, 'md')
         print("Tabchi [ Message ]")
 
 end
@@ -359,8 +359,8 @@ d:srem('tblock',b)
       tabchi.sendText(msg.chat_id_, msg.id_, 1, '*User Unblocked*', 1, 'md') 
 end
 
-if text == 'tabliqgar' and is_sudo(msg) then
-tabchi.sendText(msg.chat_id_, msg.id_, 1,'*TbabliqGar\n*telegra.ph/CernerTeam-05-26', 1, 'md')
+if text == 'robat' and is_sudo(msg) then
+tabchi.sendText(msg.chat_id_, msg.id_, 1,'*jooooon', 1, 'md')
 end
 
 
