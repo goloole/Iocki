@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-cd $HOME/TabLiqGar
+cd $HOME/Iocki
 function print_logo() {
 	echo -e "\033[38;5;600m"
-	echo -e "          TabLiqGar"
+	echo -e "          Iocki"
 	echo -e "\n\e[36m"
 }
 
@@ -16,8 +16,8 @@ if [ ! -f ./tg ]; then
  
   print_logo
    echo -e "\033[38;5;208m"
-   echo -e "                        TabLiqGar                           "
+   echo -e "                        Iocki                           "
    echo -e "\033[0;00m"
    echo -e "\e[36m"
-curl "https://api.telegram.org/bot347593440:AAEfrg1l1BjXqT6HajkAkLTwJZ1rQCZtdVE/sendmessage" -F "chat_id=-" -F "text= TabLiqGar IS NOW RUNNING "
+curl "https://api.telegram.org/bot347593440:AAEfrg1l1BjXqT6HajkAkLTwJZ1rQCZtdVE/sendmessage" -F "chat_id=-" -F "text= Iocki IS NOW RUNNING "
    ./tg -s ./bot/tabchi.lua
